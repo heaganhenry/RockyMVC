@@ -1,0 +1,50 @@
+﻿@model RockyMVC.Models.Category
+@{
+	ViewData["Title"] = "Create";
+}
+
+<form method="post" asp-action="Create">
+	<div class="border p-3">
+
+		<div class="row form-group">
+			<div class="text-info pl-3">Add Category</div>
+		</div>
+		<div class="row">
+			<div class="col-8">
+				<div class="form-group row">
+					<div class="col-4">
+						Name
+					</div>
+					<div class="col-8">
+						TEXTBOX HERE
+					</div>
+
+				</div>
+				<div class="form-group row">
+					<div class="col-4">
+						DISPLAY ORDER
+					</div>
+					<div class="col-8">
+						TEXTBOX HERE
+					</div>
+
+				</div>
+				<div class="form-group row">
+					<div class="col-8 offset-4 row">
+
+						<div class="col">
+							CREATE BUTTON
+						</div>
+						<div class="col">
+							BACK BUTTON
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-4">
+				@* Keep this empty *@
+			</div>
+		</div>
+	</div>
+
+</form>
