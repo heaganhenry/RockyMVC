@@ -4,8 +4,8 @@
 }
 
 <form method="post" asp-action="Create">
+	<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 	<div class="border p-3">
-		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 		<div class="row form-group">
 			<div class="text-info pl-3">Add Category</div>
 		</div>
@@ -16,7 +16,7 @@
 						<label asp-for="Name"></label>
 					</div>
 					<div class="col-8">
-						<input asp-for="Name" class="form-control"/>
+						<input asp-for="Name" class="form-control" />
 						<span asp-validation-for="Name" class="text-danger"></span>
 					</div>
 
@@ -35,11 +35,11 @@
 					<div class="col-8 offset-4 row">
 
 						<div class="col">
-							<input type="submit" class="btn btn-info w-100" value="Create"/>
+							<input type="submit" class="btn btn-info w-100" value="Create" />
 						</div>
 						<div class="col">
 							<a asp-action="Index" class="btn btn-success w-100">
-								Back
+								<i class="fas fa-sign-out-alt"></i> Back
 							</a>
 						</div>
 					</div>
@@ -52,3 +52,10 @@
 	</div>
 
 </form>
+
+@section Scripts
+{
+	@{
+		<partial name="_ValidationScriptsPartial" />
+	}
+}
